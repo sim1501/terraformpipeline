@@ -26,7 +26,7 @@ pipeline {
 
         stage('TerraformValidate'){
             steps {
-                file('Jenkins'){
+                dir('jenkins-terraform-pipeline/ec2_pipeline/'){
                     sh "terraform validate"
                 }
             }
