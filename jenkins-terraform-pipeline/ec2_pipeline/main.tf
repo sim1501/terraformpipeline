@@ -6,7 +6,7 @@ terraform {
     }
   }
 }
-resource "aws_instance" "" {
+resource "aws_instance" "my_terraform_instance" {
   ami           = var.ami
   instance_type = var.instance_type
 
