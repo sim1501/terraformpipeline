@@ -3,10 +3,13 @@ terraform {
     aws = {
       source = "hashicorp/aws"
       version = "~> 3.27"
-      region = "us-west-2"
     }
   }
 }
+provider "aws" {
+  region = "us-west-2"
+}
+
 resource "aws_instance" "my_terraform_instance" {
   ami           = var.ami
   instance_type = var.instance_type
