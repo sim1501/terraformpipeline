@@ -68,12 +68,7 @@ pipeline {
                         apply = false
                          currentBuild.result = 'UNSTABLE'
                     }
-                    if(apply){
-                        dir('jenkins-terraform-pipeline/ec2_pipeline/'){
-                            unstash "terraform-plan"
-                            sh 'terraform apply terraform.tfplan'
-                        }
-                    }
+                 
                 }
             }
         }
